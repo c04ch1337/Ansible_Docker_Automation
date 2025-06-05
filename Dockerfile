@@ -6,8 +6,9 @@ LABEL version="1.0"
 LABEL description="Ansible Docker container with volume mounts for local development."
 
 # Environment
-ENV LANG C.UTF-8
-ENV LC_ALL C.UTF-8
+ENV LANG=C.UTF-8 \
+    LC_ALL=C.UTF-8 \
+    TZ=America/Chicago
 
 # Install system dependencies and Ansible
 RUN apt-get update && \
