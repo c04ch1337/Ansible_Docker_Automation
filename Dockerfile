@@ -19,6 +19,7 @@ RUN apt-get update && \
         openssh-client \
         vim \
         sudo \
+        tzdata \
         ansible \
         ansible-lint && \
     apt-get clean && \
