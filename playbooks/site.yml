@@ -1,0 +1,13 @@
+---
+- name: Example Site Playbook
+  hosts: all
+  become: true
+  vars_files:
+    - ../group_vars/all.yml
+
+  tasks:
+    - name: Ensure Nginx is installed (example task)
+      apt:
+        name: nginx
+        state: present
+      when: ansible_os_family == 'Debian'
