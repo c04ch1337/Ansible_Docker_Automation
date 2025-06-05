@@ -2,4 +2,4 @@
 app_name: "my_cool_app"
 env: "development"
 default_user: "ubuntu"
-timezone: "CST"
+timezone: "UTC"

@@ -11,5 +11,6 @@ services:
       - ./roles:/ansible/roles
       - ./group_vars:/ansible/group_vars
       - ./host_vars:/ansible/host_vars
+      - ./scripts:/ansible/scripts
     working_dir: /ansible
     tty: true
