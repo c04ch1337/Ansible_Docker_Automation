@@ -94,4 +94,4 @@ Feel free to fork and improve. PRs welcome!
 
 ## 📜 License
 
-MIT License © C04CH_1337
+MIT License © [Your Name]
