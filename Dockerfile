@@ -1,7 +1,7 @@
 FROM python:3.11-slim
 
 # Metadata
-LABEL maintainer="YourName <youremail@example.com>"
+LABEL maintainer="C04Ch_1337 <c04ch@protonmail.com>"
 LABEL version="1.0"
 LABEL description="Ansible Docker container with volume mounts for local development."
 
