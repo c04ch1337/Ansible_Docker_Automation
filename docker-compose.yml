@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  ansible:
+    build: .
+    container_name: ansible_dev
+    volumes:
+      - ./ansible.cfg:/ansible/ansible.cfg
+      - ./inventories:/ansible/inventories
+      - ./playbooks:/ansible/playbooks
+      - ./roles:/ansible/roles
+      - ./group_vars:/ansible/group_vars
+      - ./host_vars:/ansible/host_vars
+    working_dir: /ansible
+    tty: true
