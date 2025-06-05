@@ -18,13 +18,18 @@ RUN apt-get update && \
         openssh-client \
         vim \
         sudo \
-        ansible && \
+        ansible \
+        ansible-lint && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 # Create ansible directory structure
-RUN mkdir -p /ansible/{inventories,playbooks,roles,group_vars,host_vars} && \
+RUN mkdir -p /ansible/{inventories,playbooks,roles,group_vars,host_vars,scripts} && \
     touch /ansible/ansible.cfg
+
+# Copy lint script
+COPY scripts/ansible_lint.sh /usr/local/bin/ansible_lint.sh
+RUN chmod +x /usr/local/bin/ansible_lint.sh
 
 # Set working directory
 WORKDIR /ansible
